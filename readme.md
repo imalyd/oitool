@@ -24,7 +24,7 @@ A gedit plugin which can test OI codes.
 ## Usage
 
 1. Open your code. Let its name be `<name>.<ext>`.
-2. Put your testcases in `<i>.in` and `<i>.ans`. (`<i>` is the ID of the testcases, ranging in $[0,\mathrm{testcases}]$)
+2. Put your testcases in `<i>.in` and `<i>.ans`. (`<i>` is the ID of the testcases, ranging in [0,testcases])
 3. Press `F5`.
 4. You can see the results in the panel below.
    Judge results are: `AC`(Answer correct), `WA`(Wrong answer), `TLE`(Time limit exceeded) and `RE`(Runtime error).
