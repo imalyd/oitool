@@ -1,3 +1,5 @@
+<p align="center"><img src="oitool.png"></p>
+
 # OI Tool(v1.0)
 
 A gedit plugin which can test OI codes.
