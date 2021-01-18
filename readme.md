@@ -10,11 +10,11 @@ A gedit plugin which can test OI codes.
 ## Installation
 
 1. Open Gedit and enable the plugin "external tools".
-   ![](0.png)
+   ![0.png](https://s3.ax1x.com/2021/01/18/sy4ybn.png)
 2. Manage "external tools".
-   ![](2.png)
+   ![2.png](https://s3.ax1x.com/2021/01/18/sy4sDs.png)
 3. Insert the code from `oi.sh` and config the new tool as shown in the picture.
-   ![](1.png)
+   ![1.png](https://s3.ax1x.com/2021/01/18/sy4cEq.png)
 
 ## Usage
 
@@ -37,7 +37,7 @@ judger="diff" # Special judge of your code.
               # Usage:
               # - Argument #1: output file.
               # - Argument #2: answer file.
-			  # You can find the input file from the answer file's name.
+              #   You can find the input file from the answer file's name.
               # - Return 0 if AC and non-zero if WA.
 testcases=31 # Maximum ID of testcases
 ```
