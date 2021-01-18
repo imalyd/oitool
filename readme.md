@@ -10,10 +10,13 @@ A gedit plugin which can test OI codes.
 ## Installation
 
 1. Open Gedit and enable the plugin "external tools".
+   
    ![0.png](0.png)
 2. Manage "external tools".
+   
    ![2.png](2.png)
 3. Insert the code from `oi.sh` and config the new tool as shown in the picture.
+   
    ![1.png](1.png)
 
 ## Usage
