@@ -1,8 +1,10 @@
 <p align="center"><img src="oitool.png"></p>
 
-# OI Tool(v1.0)
+<h1 align="center">OI Tool(v1.0)</h1>
 
-A gedit plugin which can test OI codes.
+<p align="center">A gedit plugin which can test OI codes.</p>
+
+# Documentation
 
 ## Requirements
 
@@ -16,10 +18,10 @@ A gedit plugin which can test OI codes.
    ![0.png](0.png)
 2. Manage "external tools".
    
-   ![2.png](2.png)
+   ![1.png](1.png)
 3. Insert the code from `oi.sh` and config the new tool as shown in the picture.
    
-   ![1.png](1.png)
+   ![2.png](2.png)
 
 ## Usage
 
@@ -30,9 +32,19 @@ A gedit plugin which can test OI codes.
    Judge results are: `AC`(Answer correct), `WA`(Wrong answer), `TLE`(Time limit exceeded) and `RE`(Runtime error).
    Your `stdout` and `stderr` are directed to `<name><i>.out` and `<name><i>.err` respectively.
 
-## Settings
+## Configuration
 
-Create a file named `.ya` in your folder. It should be like:
+### User configuration
+
+The configuration file should be named `.ya` in your user folder. 
+
+### Workspace configuration
+
+The configuration file should be named `.ya` in the workspace folder. 
+
+### Settings format
+
+The configuration file should be like:
 
 ```sh
 time_limit=5 # Time limit of your code. Unit: second
@@ -47,4 +59,4 @@ judger="diff" # Special judge of your code.
 testcases=31 # Maximum ID of testcases
 ```
 
-If there is no file named `.ya` in your folder, then the default setting will be used.
+If there is no configuration file, then the default setting will be used.
