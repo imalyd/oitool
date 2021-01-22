@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Default configuration
 time_limit=5 # Unit: second
 memory_limit=512 # Unit: MB
 compiler="g++ -lm -O2 -std=c++11"
@@ -19,9 +21,16 @@ if [ -e .ya ]; then
 	. .ya
 fi
 
-# Compile
+# Get current file
 cppfile=$GEDIT_CURRENT_DOCUMENT_NAME
 exefile=${cppfile%.*}
+
+# Read file configuation
+if [ -e $exefile.ya ]; then
+	. $exefile.ya
+fi
+
+# Compile
 $compiler 2> $exefile.yalog $cppfile -o $exefile 
 
 if test $? -eq 0; then
