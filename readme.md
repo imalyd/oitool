@@ -4,7 +4,7 @@
 
 <p align="center">A gedit plugin which can test OI codes.</p>
 
-# Features
+# Features of OI Tool(v2.0)
 
 - **Test your OI codes fast.**
 - **Highly customizable**: almost all things of OI Tool can be customized.
