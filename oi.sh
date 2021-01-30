@@ -48,10 +48,10 @@ if [ $? -eq 0 ]; then
 	printf "       #  STATUS    TIME\n"
 	for((i=0;i<=testcases;++i))
 	do
-		if [ -e $i.in ]; then
-			input=$(echo $input_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
-			output=$(echo $output_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
-			answer=$(echo $answer_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
+		input=$(echo $input_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
+		output=$(echo $output_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
+		answer=$(echo $answer_file|sed "s/<i>/$i/"|sed "s/<exe>/$exefile/")
+		if [ -e $input ]; then
 			
 			# Let the time limit be a little larger to distinguish TLE from RE
 			ulimit -t $[time_limit+1]
