@@ -17,21 +17,7 @@
 
 # Installation
 
-1. Enable the **plugin "external tools"** in "Preferences".
-
-2. Click **"Manage External Tools"**.
-
-3. Create **new tools** as follows. (Non-bold arguments are customizable.)
-   -  Tools:
-      | Name | Code |
-      |---|---|
-      | `OI Tool - Build and run testcases` | **From `oi.sh`** |
-      | `OI Tool - Build` | **From `build.sh`** |
-      | `OI Tool - Stress test` | **From `stress.sh`** |
-   -  Settings:
-      | Shortcut key | Save | Input | Output | Applicability |
-      |---|---|---|---|--|
-      | You define it | **Current Document** | **Nothing** | **Display in bottom pane** | Choose the languages you need |
+Download the files in releases and copy them to `~/.config/gedit/tools`.
 
 # Configuration
 
@@ -67,7 +53,7 @@ If there is no configuration file found, then the default setting will be used.
 
 1. Open your source file `<name>.<ext>`. After building, the executable file will be named `<exe>`(`<exe>`=`<name>`).
 2. Put your testcases in `<i>.in` and `<i>.ans`. (`<i>` is the ID of the testcases, ranging in [0,`<testcases>`])
-3. Press the shortcut key you choose.
+3. Press the shortcut key `F5`.
 4. You can see the results in the panel below.
    Judge results are: `AC`(Answer correct), `WA`(Wrong answer), `TLE`(Time limit exceeded) and `RE`(Runtime error).
    Your `stdout` and `stderr` are redirected to `<exe><i>.out` and `<exe>.<i>.yaerr` respectively.
@@ -90,12 +76,14 @@ It is similar to "OI Tool - Build and run testcases".
 
 The only difference is that "OI Tool - Build" will only build the source file and it will not run testcases.
 
+The shortcut key for "OI Tool - Build" is `Ctrl + F5`.
+
 # OI Tool - Stress test
 
 ## Usage
 
 1. Put your program's executable file `<program>`, standard program's executable file `<std>` and input generator's executable file `<gen>` in the workspace folder.
-2. Press the shortcut key you choose.
+2. Press the shortcut key `Ctrl + Shift + F12`.
 3. The first generated data that caused a `WA` will be copied in `<program>.yain` and `<std>.yaout`.
    Your `stdout` and `stderr` are redirected to `<program>.yaout` and `<program>.yaerr` respectively.
 

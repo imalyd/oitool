@@ -1,4 +1,12 @@
 #!/bin/bash
+# [Gedit Tool]
+# Save-files=nothing
+# Input=nothing
+# Name=OI Tool - Stress test
+# Shortcut=<Primary><Shift>F12
+# Applicability=all
+# Output=output-panel
+
 
 # Default configuration
 time_limit=5 # Unit: second

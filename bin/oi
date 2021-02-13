@@ -1,4 +1,13 @@
 #!/bin/bash
+# [Gedit Tool]
+# Shortcut=F5
+# Output=output-panel
+# Applicability=all
+# Languages=
+# Save-files=document
+# Input=nothing
+# Name=OI Tool - Build and run testcases
+
 
 # Default configuration
 time_limit=5 # Unit: second

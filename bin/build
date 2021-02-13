@@ -1,4 +1,12 @@
 #!/bin/bash
+# [Gedit Tool]
+# Output=output-panel
+# Name=OI Tool - Build
+# Applicability=all
+# Shortcut=<Primary>F5
+# Save-files=document
+# Input=nothing
+
 
 # Default configuration
 compiler="g++ <file> -o <exe> -lm -O2 -std=c++11 &> <err>"
