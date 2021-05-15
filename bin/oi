@@ -124,8 +124,10 @@ if [ $? -eq 0 ]; then
 		done
 	fi
 	
-	let score=(ACCases*100)/TotCases
-	printf "YOUR SCORE: $score\n"
+	if [ $TotCases -ne 0 ]; then
+		let score=(ACCases*100)/TotCases
+		printf "YOUR SCORE: $score\n"
+	fi
 else
 	# Output compile errors
 	printf "COMPILE ERROR!\n────────────────────────\n"
