@@ -8,6 +8,7 @@
 # Output=output-panel
 
 
+
 # Default configuration
 time_limit=5 # Unit: second
 memory_limit=512 # Unit: MB
@@ -33,6 +34,12 @@ fi
 # Testcase counter
 i=0
 
+# Let the time limit be a little larger to distinguish TLE from RE
+prog_limit=$[time_limit+1]
+if [ $prog_limit -lt 10 ];then
+	prog_limit=10
+fi
+
 printf "JUDGE RESULTS\n────────────────────────\n"
 while :
 do
@@ -40,13 +47,21 @@ do
 	input=$program.yain
 	output=$program.yaout
 	answer=$std.yaout
+	
+	# Run Generator
+	./$gen > $input 2> $gen.s.yaerr
 
 	# Set the time limit
-	ulimit -t $[time_limit]
+	ulimit -t $prog_limit
 	
 	# Set the memory limit
 	ulimit -m $[memory_limit*1024]
-	./$gen > $input 2> $gen.s.yaerr
+	ulimit -s $[memory_limit*1024]
+			
+	# Set the process limit
+	ulimit -u 1
+	
+	# Run the two programs
 	./$std < $input > $answer 2> $std.s.yaerr
 	./$program < $input > $output 2> $program.s.yaerr
 	
@@ -67,4 +82,5 @@ do
 	
 	# Increase testcase counter
 	i=$[i+1]
+	echo $i
 done
